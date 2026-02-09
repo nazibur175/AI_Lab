@@ -19,3 +19,12 @@ canget(state(_, _, _, has)).
 canget(State1) :-
     move(State1, _, State2),
     canget(State2).
+
+% Sample queries:
+% Starting state: monkey at door, on floor, box at window, does not have banana
+% ?- canget(state(atdoor, onfloor, atwindow, hasnot)).
+% true.
+%
+% Another example (already has banana):
+% ?- canget(state(middle, onbox, middle, has)).
+% true.

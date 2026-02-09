@@ -12,3 +12,18 @@ hanoi(N, Source, Target, Auxiliary) :-
     write(Target),
     nl,
     hanoi(M, Auxiliary, Target, Source).
+
+% Sample queries:
+% ?- hanoi(1, left, right, middle).
+% Move disk 1 from left to right
+% true.
+%
+% ?- hanoi(3, left, right, middle).
+% Move disk 1 from left to middle
+% Move disk 2 from left to right
+% Move disk 1 from middle to right
+% Move disk 3 from left to middle
+% Move disk 1 from right to left
+% Move disk 2 from right to middle
+% Move disk 1 from left to middle
+% true.
